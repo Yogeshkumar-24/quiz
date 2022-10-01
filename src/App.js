@@ -36,7 +36,7 @@ const handleSubmit = (e) => {
   setPage(0)
 }
 useEffect(() => {
-  if(timer == 0){
+  if(timer === 0){
     const autoSubmit = () => {
       socket.emit('answer',[ans1,ans2,ans3,ans4,ans5])
       socket.on('total', (mark) => {
@@ -53,7 +53,7 @@ if(flag){
       setTimer(timer - 1)
     },1000)
   }
-  if (timer != 0){
+  if (timer !== 0){
     handleTimer()
   
   }
@@ -65,7 +65,7 @@ if(flag){
     <div className="App">
      <div className="container">
       {/* username */}
-      {page == 1 ? (
+      {page === 1 ? (
         <div className="username">
           <h1>Quiz App</h1>
           <h1>Enter your name</h1>
