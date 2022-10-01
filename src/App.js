@@ -3,7 +3,7 @@ import  {useEffect } from 'react'
 import io from 'socket.io-client'
 import './App.css'
 import { useState } from 'react'
-const socket = io.connect('http://localhost:5000')
+const socket = io.connect('https://quiz-socket.herokuapp.com/')
 socket.emit('message', 'how are you')
 
 function App() {
